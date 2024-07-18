@@ -7,7 +7,9 @@ const AddUserForm = ({ onAddUser }) => {
         email: '',
         password: '',
         address: '',
-        roleId: ''
+        roleId: '',
+        phone_no:'',
+        deviceId:''
     });
 
     const handleInputChange = (e) => {
@@ -28,7 +30,9 @@ const AddUserForm = ({ onAddUser }) => {
             email: '',
             password: '',
             address: '',
-            roleId: ''
+            roleId: '',
+            phone_no:'',
+            deviceId:''
         });
     };
 
@@ -48,7 +52,7 @@ const AddUserForm = ({ onAddUser }) => {
                     type="text"
                     id="lastName"
                     placeholder="Last Name"
-                    className="border p-2 m-2 mr-1"
+                    className="border p-2 m-1 mr-1"
                     value={formData.lastName}
                     onChange={handleInputChange}
                 />
@@ -56,7 +60,7 @@ const AddUserForm = ({ onAddUser }) => {
                     type="email"
                     id="email"
                     placeholder="Email"
-                    className="border p-2 m-2 mr-1"
+                    className="border p-2 m-1 mr-1"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -65,7 +69,7 @@ const AddUserForm = ({ onAddUser }) => {
                     type="password"
                     id="password"
                     placeholder="Password"
-                    className="border p-2 m-2 mr-1"
+                    className="border p-2 m-1 mr-1"
                     value={formData.password}
                     onChange={handleInputChange}
                     required
@@ -74,15 +78,32 @@ const AddUserForm = ({ onAddUser }) => {
                     type="text"
                     id="address"
                     placeholder="Address"
-                    className="border p-2 m-2 mr-1"
+                    className="border p-2 m-1 mr-1"
                     value={formData.address}
+                    onChange={handleInputChange}
+                />
+                
+                <input
+                    type="text"
+                    id="phone_no"
+                    placeholder="Phone No"
+                    className="border p-2 m-1 mr-1"
+                    value={formData.phone_no}
+                    onChange={handleInputChange}
+                />
+                <input
+                    type="text"
+                    id="deviceId"
+                    placeholder="Device Id"
+                    className="border p-2 m-1 mr-1"
+                    value={formData.deviceId}
                     onChange={handleInputChange}
                 />
                 {/* <input
                     type="text"
                     id="role"
                     placeholder="Role"
-                    className="border p-2 m-2 mr-1"
+                    className="border p-2 m-1 mr-1"
                     value={formData.role}
                     onChange={handleInputChange}
                     required
@@ -90,7 +111,7 @@ const AddUserForm = ({ onAddUser }) => {
                 
                     <select
                         id="role"
-                        className="border p-2 m-2 mr-1"
+                        className="border p-2 m-1 mr-2"
                         value={formData.role}
                         onChange={handleInputChange}
                         required
@@ -100,9 +121,11 @@ const AddUserForm = ({ onAddUser }) => {
                         <option value="Manager">Manager</option>
                         <option value="Field Staff">Field Staff</option>
                     </select>
+
                 <button type="submit" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                     Add User
                 </button>
+
             </form>
         </>
     );

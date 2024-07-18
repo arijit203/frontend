@@ -30,7 +30,7 @@ const ChangeUserRoleForm = ({ onChangeUserRole }) => {
             <input
                 type="text"
                 id="id"
-                placeholder="User UID"
+                placeholder="User ID"
                 className="border p-2 mr-1"
                 value={formData.id}
                 onChange={handleInputChange}

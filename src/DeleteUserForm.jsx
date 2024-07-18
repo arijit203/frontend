@@ -17,7 +17,7 @@ const DeleteUserForm = ({ onDeleteUser }) => {
                 <input
                     type="text"
                     placeholder="User ID"
-                    className="border p-2 mr-1"
+                    className="border p-2 mr-2"
                     value={deleteId}
                     onChange={(e) => setDeleteId(e.target.value)}
                     required
